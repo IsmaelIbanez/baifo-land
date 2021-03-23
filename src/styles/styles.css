@@ -1,7 +1,9 @@
 @import "tailwindcss/base";
 
 @import "tailwindcss/components";
-
+.titulo{
+    @apply bg-yellow-500 text-white
+}
 @import "tailwindcss/utilities";
 
 
