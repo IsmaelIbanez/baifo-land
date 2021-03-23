@@ -11,5 +11,8 @@
     "postcss": "^8.2.8",
     "tailwindcss": "^2.0.4",
     "vite": "^2.1.0"
+  },
+  "dependencies": {
+    "postcss-import": "^14.0.0"
   }
 }
