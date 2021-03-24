@@ -2,17 +2,18 @@
   "homepage": "https://www.dmilanes.com/baifo-land/",
   "name": "baifo-land",
   "version": "0.0.0",
+  "main": "./src/sass/styles.scss",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d dist",
+    "css-build": "node-sass --omit-source-map-url src/sass/styles.scss src/css/styles.css",
+    "css-watch": "npm run css-build -- --watch",
+    "start": "npm run css-watch"
   },
   "devDependencies": {
-    "autoprefixer": "^10.2.5",
     "gh-pages": "^3.1.0",
-    "postcss": "^8.2.8",
-    "postcss-import": "^14.0.0",
     "vite": "^2.1.0"
   }
 }
