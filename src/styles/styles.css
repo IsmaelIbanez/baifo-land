@@ -1,7 +1,0 @@
-@tailwind base;
-
-@tailwind components;
-.titulo{
-    @apply bg-yellow-500 text-white
-}
-@tailwind utilities;
