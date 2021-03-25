@@ -7,10 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "serve": "vite preview",
-    "deploy": "gh-pages -d dist",
-    "css-build": "node-sass --omit-source-map-url src/sass/styles.scss src/css/styles.css",
-    "css-watch": "npm run css-build -- --watch",
-    "start": "npm run css-watch"
+    "deploy": "gh-pages -d dist"
   },
   "devDependencies": {
     "gh-pages": "^3.1.0",
