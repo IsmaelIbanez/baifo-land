@@ -2,7 +2,6 @@
   "homepage": "https://www.dmilanes.com/baifo-land/",
   "name": "baifo-land",
   "version": "0.0.0",
-  "main": "./src/sass/styles.scss",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
