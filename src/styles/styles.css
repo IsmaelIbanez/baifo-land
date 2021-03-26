@@ -1,5 +1,48 @@
-.image {
-  width: 320px;
-  height: 320px;
-  opacity: 60%;
+@import 'bulma/css/bulma.css';
+
+@font-face {
+  font-family: 'Roboto';
+  src:url('/src/assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
 }
+
+body {
+  background-image: url(/src/assets/img/bg-radio.jpg);
+  background-size: cover;
+}
+/* Start Playlist Design  */
+.img-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  align-content: center;
+}
+
+.img-playlist {
+  width: 350px;
+  height: 350px;
+  opacity: 0.9;
+  margin: 15px;
+}
+
+.playlist-title:hover {
+  font-size: 60px;
+}
+.img-playlist:hover {
+  opacity: 70%;
+}
+.img-names {
+  border-radius: 10px;
+}
+.playlist-title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 56px;
+    font-family: 'Roboto', sans-serif;
+    color: white;
+}
+
+/* END Playlist Design */
