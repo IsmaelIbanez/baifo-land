@@ -7,7 +7,12 @@
 
 body {
   background-image: url(/src/assets/img/bg-radio.jpg);
-  background-size: cover;
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+li {
+  list-style: none;
 }
 /* Start Playlist Design  */
 .img-container {
@@ -46,3 +51,16 @@ body {
 }
 
 /* END Playlist Design */
+
+/* START Footer Style */
+.my-footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+/* END Footer */
+.card-container {
+  display: flex;
+  flex-direction: row;
+}
