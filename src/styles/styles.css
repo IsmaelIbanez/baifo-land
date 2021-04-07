@@ -52,6 +52,10 @@ li {
 
 /* END Playlist Design */
 
+.team-image{
+  object-fit:cover;
+}
+
 /* START Footer Style */
 .my-footer {
   display: flex;
