@@ -5,9 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Baify</title>
-    <link rel="stylesheet" href="./src/styles/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
-    <script defer src="src/js/script.js"></script>
+    <link rel="stylesheet" href="./src/styles/styles.css">
     <!-- Global site tag (gtag.js) - Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RHXQ6310N2"></script>
     <script>
@@ -16,6 +15,7 @@
       gtag('js', new Date());
       gtag('config', 'G-RHXQ6310N2');
     </script>
+    <script defer src="src/js/index.js"></script>
   </head>
   <body>
 
@@ -29,14 +29,14 @@
                 <h1 class="title has-text-light">Baify</h1>
               </a>
               <span class="navbar-burger" data-target="navbarMenuHeroC">
-                <span></span>
-                <span></span>
-                <span></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
+                <span aria-hidden="true"></span>
               </span>
             </div>
-            <div id="navbarMenuHeroC" class="navbar-menu">
+            <div id="navbarMenuHeroC" class="navbar-menu transparentitem">
               <div class="navbar-end">
-                <a class="navbar-item is-active has-text-light">
+                <a class="navbar-item has-text-light">
                   Home
                 </a>
                 <a class="navbar-item has-text-light">
@@ -45,11 +45,6 @@
                 <a class="navbar-item has-text-light">
                   Contact
                 </a>
-                <span class="navbar-item">
-                  <a class="button is-success is-inverted">
-                    <span>Login</span>
-                  </a>
-                </span>
               </div>
             </div>
           </div>

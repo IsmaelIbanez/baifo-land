@@ -15,21 +15,25 @@ li {
   list-style: none;
 }
 
+.transparentitem{
+  background-color: transparent;
+}
+
 .separator{
   margin-bottom: 2em;
 }
 
 .sentences-cards{
-  background-color:#7171718a
+  background-color:#d7eee6cc;
 }
 
 .music-text{
-  color: #f2f2f2
+  color: #f2f2f2;
+  text-shadow: 0 0 2px black;
 }
 
 .hero-head {
   background: rgba(38,239,123,0.3);
-  margin: 2em;
 }
 
 .navbar{
@@ -67,6 +71,17 @@ li {
   height: 350px;
   opacity: 0.9;
   margin: 15px;
+}
+
+@media only screen and (max-width: 360px) {
+
+  .img-playlist {
+    width: 300px;
+    height: 300px;
+    opacity: 0.9;
+    margin: 15px;
+  }
+
 }
 
 .img-playlist:hover .playlist-title {
