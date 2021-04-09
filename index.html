@@ -7,10 +7,19 @@
     <title>Baify</title>
     <link rel="stylesheet" href="./src/styles/styles.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+    <script defer src="src/js/script.js"></script>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-RHXQ6310N2"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-RHXQ6310N2');
+    </script>
   </head>
   <body>
 
-    <section class="hero is-fullheight">
+    <section class="hero is-fullheight head-image">
       <!-- Hero head: will stick at the top -->
       <div class="hero-head">
         <header class="navbar">
@@ -50,76 +59,136 @@
       <!-- Hero content: will be in the middle -->
       <div class="hero-body">
         <div class="container has-text-centered">
-          <p class="title is-1 has-text-light">
+          <p class="copytitle title is-1 has-text-light">
             Copy Left Music
           </p>
-          <p class="subtitle is-2 has-text-light">
+          <p class="copysubtitle subtitle is-2 has-text-light">
             Everything you need in one place.
           </p>
           <button class="button is-primary">Play Music</button>
+          <div class="slideshow-container">
+            <div class="card-container mySlides">
+              <div class="card sentences-cards">
+                  <div class="card-content music-text">
+                    <p>“Music gives a soul to the universe, wings to the mind, flight to the imagination and life to everything.”</p>
+                    <p>- Plato -</p>
+                  </div>
+              </div>
+            </div>
+            <div class="card-container mySlides">
+            <div class="card sentences-cards">
+                <div class="card-content music-text">
+                  <p>“The most exciting rhythms seem unexpected and complex, the most beautiful melodies simple and inevitable.”</p>
+                  <p>- W.H. Auden -</p>
+                </div>
+            </div>
+            </div> 
+            <div class="card-container mySlides">
+              <div class="card sentences-cards">
+                  <div class="card-content music-text">
+                    <p>“A painter paints pictures on canvas. But musicians paint their pictures on silence.”</p>
+                    <p>- Leopold Stokowski -</p>
+                  </div>
+              </div>
+            </div>
+            <div class="card-container mySlides">
+              <div class="card sentences-cards">
+                  <div class="card-content music-text">
+                    <p>“Music is a proud, temperamental mistress. Give her the time and attention she deserves, and she is yours. Slight her and there will come a day when you call and she will not answer. So I began sleeping less to give her the time she needed.”</p>
+                    <p>- Patrick Rothfuss -</p>
+                  </div>
+              </div>
+            </div>
+            <div style="text-align:center">
+              <span class="dot" onclick="currentSlide(1)"></span>
+              <span class="dot" onclick="currentSlide(2)"></span>
+              <span class="dot" onclick="currentSlide(3)"></span>
+              <span class="dot" onclick="currentSlide(4)"></span>
+            </div>
+          </div>
         </div>
       </div>
-
     </section>
 
     <section class="hero is-light is-fullheight">
+      <section class="hero is-info is-small separator">
+        <div class="hero-body">
+          <p class="title has-text has-text-centered">Our Current Playlists</p>
+        </div>
+      </section>
       <div class="container img-container">
-
         <figure class="image img-playlist">
           <a href="">
-            <p class="playlist-title">Chill</p>
             <img class="img-names" src="src/assets/img/chill.jpg">
+            <p class="playlist-title">Chill</p>
           </a>
         </figure>
 
         <figure class="image img-playlist">
           <a href="">
-            <p class="playlist-title">Workout</p>
             <img class="img-names" src="src/assets/img/workout.jpg">
+            <p class="playlist-title">Workout</p>
           </a>
         </figure>
 
         <figure class="image img-playlist">
           <a href="">
+            <img class="img-names" src="src/assets/img/gaming.jpg">
             <p class="playlist-title">Lo-Fi</p>
-            <img class="img-names" src="src/assets/img/gaming.jpg">
           </a>
         </figure>
 
         <figure class="image img-playlist">
           <a href="">
-            <p class="playlist-title">Piano</p>
             <img class="img-names" src="src/assets/img/piano.jpg">
+            <p class="playlist-title">Piano</p>
           </a>
         </figure>
 
         <figure class="image img-playlist">
           <a href="">
-            <p class="playlist-title">String</p>
             <img class="img-names" src="src/assets/img/gaming.jpg">
+            <p class="playlist-title">String</p>
           </a>
         </figure>
 
         <figure class="image img-playlist">
           <a href="">
-            <p class="playlist-title">Energy</p>
             <img class="img-names" src="src/assets/img/yoga.jpg">
+            <p class="playlist-title">Energy</p>
           </a>
         </figure>
 
       </div>
       
     </section>
+    <section class="hero donate-card">
+      <div class="donate-card container">
+        <div class="card">
+          <div class="card-content">
+            <p>You can contribute to our work by making a donation</p>
+          </div>
+        </div>
+      </div>
+      <div class ="container">
+        <button class="donate-button button is-primary">Donate</button>
+      </div>
+    </section>
+    
 
-    <section class="hero is-light is-fullheight">
+    <section class="hero is-info is-small separator">
+      <div class="hero-body">
+        <p class="title has-text has-text-centered ">Our Team</p>
+      </div>
+    </section>
 
+    <section class=" hero is-light is-fullheight">
       <!-- Cards -->
-      <h1 class="title has-text has-text-centered">Our Team</h1>
       <div class="container card-container">
         <div class="card">
           <div class="card-image">
             <figure class="image is-square">
-              <img src="src/assets/img/dario.jpg" alt="Porofile Image">
+              <img class ="team-image" src="src/assets/img/dario.jpg" alt="Porofile Image">
             </figure>
           </div>
           <div class="card-content">
@@ -140,7 +209,7 @@
         <div class="card">
           <div class="card-image">
             <figure class="image is-square">
-              <img src="src/assets/img/carlos.jpg" alt="Porofile Image">
+              <img class ="team-image" src="src/assets/img/carlos.jpg" alt="Porofile Image">
             </figure>
           </div>
           <div class="card-content">
@@ -161,7 +230,7 @@
         <div class="card">
           <div class="card-image">
             <figure class="image is-square">
-              <img class="card-img" src="https://bulma.io/images/placeholders/1280x960.png" alt="Porofile Image">
+              <img class="team-image" src="https://bulma.io/images/placeholders/1280x960.png" alt="Porofile Image">
             </figure>
           </div>
           <div class="card-content">
@@ -180,10 +249,18 @@
         </div>
       </div>
 
-      <footer class="footer">
-        <div class="content">
-
+      <div class="donate-card container">
+        <div class="card">
+          <div class="card-content">
+            <p>You can contribute to our work by making a donation</p>
+          </div>
         </div>
+      </div>
+      <div class ="container">
+        <button class="donate-button button is-primary">Donate</button>
+      </div>
+
+      <footer class="footer">
         <div class="content has-text-centered my-footer">
           <h1 class="title has-text">Baify</h1>
           <ul class="has-text-primary">Community

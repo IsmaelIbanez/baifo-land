@@ -5,16 +5,52 @@
   src:url('/src/assets/fonts/Roboto/Roboto-Bold.ttf') format('truetype');
 }
 
-body {
+.head-image {
   background-image: url(/src/assets/img/bg-radio.jpg);
-  background-size: contain;
+  background-size: cover;
   background-repeat: no-repeat;
 }
 
 li {
   list-style: none;
 }
+
+.separator{
+  margin-bottom: 2em;
+}
+
+.sentences-cards{
+  background-color:#7171718a
+}
+
+.music-text{
+  color: #f2f2f2
+}
+
+.hero-head {
+  background: rgba(38,239,123,0.3);
+  margin: 2em;
+}
+
+.navbar{
+  padding: 1em;
+}
+
+.copytitle{
+  text-shadow: 0 0 3px white
+}
+
+.copysubtitle{
+  text-shadow: 0 0 2px black
+}
+
+
+
 /* Start Playlist Design  */
+.ptitle{
+  margin-top: 4em;
+}
+
 .img-container {
   display: flex;
   flex-direction: row;
@@ -24,6 +60,8 @@ li {
   align-content: center;
 }
 
+
+
 .img-playlist {
   width: 350px;
   height: 350px;
@@ -31,8 +69,10 @@ li {
   margin: 15px;
 }
 
-.playlist-title:hover {
+.img-playlist:hover .playlist-title {
   font-size: 60px;
+  text-shadow: 0 0 3px white;
+  transform: translate(-50%, -50%) scale(1.1);
 }
 .img-playlist:hover {
   opacity: 70%;
@@ -44,19 +84,34 @@ li {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%) scale(1);
     font-size: 56px;
     font-family: 'Roboto', sans-serif;
     color: white;
+    transition: transform 0.5s;
 }
 
 /* END Playlist Design */
+
+.donate-card{
+  padding-top: 2em;
+  padding-bottom: 1em;
+}
+
+.donate-button{
+  margin-bottom: 2em;
+}
 
 .team-image{
   object-fit:cover;
 }
 
 /* START Footer Style */
+.footer {
+  background-color: rgba(38, 239, 122, 0.3);
+  
+}
+
 .my-footer {
   display: flex;
   flex-direction: row;
@@ -67,4 +122,66 @@ li {
 .card-container {
   display: flex;
   flex-direction: row;
+  padding-bottom: 5em;
 }
+
+/* frases en movimiento */
+
+.slideshow-container {
+  padding-top: 3em;
+  width: 500px;
+  margin: auto;
+}
+
+.mySlides{
+  padding-bottom: 1em;
+}
+
+.text {
+    color: #f2f2f2;
+    font-size: 15px;
+    padding: 8px 12px;
+    position: absolute;
+    bottom: 8px;
+    width: 100%;
+    text-align: center;
+}
+
+.numbertext {
+    color: #f2f2f2;
+    font-size: 12px;
+    padding: 8px 12px;
+    position: absolute;
+    top: 0;
+}
+
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #f2f2f2;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+.active,
+.dot:hover {
+    background-color: #717171;
+}
+
+.example::-webkit-scrollbar {
+  display: none;
+}
+
+.example {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+body {
+  overflow-y: hidden; /* Hide vertical scrollbar */
+  overflow-x: hidden; /* Hide horizontal scrollbar */
+ }
+
