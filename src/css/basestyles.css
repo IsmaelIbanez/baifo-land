@@ -73,17 +73,6 @@ li {
   margin: 15px;
 }
 
-@media only screen and (max-width: 360px) {
-
-  .img-playlist {
-    width: 300px;
-    height: 300px;
-    opacity: 0.9;
-    margin: 15px;
-  }
-
-}
-
 .img-playlist:hover .playlist-title {
   font-size: 60px;
   text-shadow: 0 0 3px white;
@@ -116,7 +105,9 @@ li {
 .donate-button{
   margin-bottom: 2em;
 }
-
+.cardteam{
+  width: 450px;
+}
 .team-image{
   object-fit:cover;
 }
@@ -200,3 +191,21 @@ body {
   overflow-x: hidden; /* Hide horizontal scrollbar */
  }
 
+ @media only screen and (max-width: 360px) {
+
+  .card-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+    align-content: center;
+  }
+
+  .img-playlist {
+    width: 300px;
+    height: 300px;
+    opacity: 0.9;
+    margin: 15px;
+  }
+}

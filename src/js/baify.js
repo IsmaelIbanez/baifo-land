@@ -96,28 +96,41 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
   });
-
-  var stripe = Stripe("pk_test_51IdHvTHy6yeJaL9kFIfKq6D30x1slhxNU1tSwVPvJaywOPrh43FqSrcpts9JlfvsDCmciO0TIcFiwUgFAKtn5bSy001kHlKiCi");
-  var checkoutButton = document.getElementById("checkout-button");
-  checkoutButton.addEventListener("click", function () {
-    stripe.redirectToCheckout({ 
-        
-        items: [{price:'price_1IgSNSHy6yeJaL9kRXStnHD3',quantity: 1}],
-        
-
-    })
-        .then(function (result) {
-        // If redirectToCheckout fails due to a browser or network
-        // error, you should display the localized error message to your
-        // customer using error.message.
-        if (result.error) {
-          alert(result.error.message);
-        }
-    })
-      .catch(function (error) {
-        console.error("Error:", error);
+  
+  (function() {
+    var stripe = Stripe('pk_test_51IdHvTHy6yeJaL9kFIfKq6D30x1slhxNU1tSwVPvJaywOPrh43FqSrcpts9JlfvsDCmciO0TIcFiwUgFAKtn5bSy001kHlKiCi');
+  
+    var checkoutButton = document.getElementById('checkout-button-price_1IgSNSHy6yeJaL9kRXStnHD3');
+    checkoutButton.addEventListener('click', function () {
+      /*
+        * When the customer clicks on the button, redirect
+        * them to Checkout.
+        */
+      stripe.redirectToCheckout({
+        lineItems: [{price: 'price_1IgSNSHy6yeJaL9kRXStnHD3', quantity: 1}],
+        mode: 'payment',
+        /*
+          * Do not rely on the redirect to the successUrl for fulfilling
+          * purchases, customers may not always reach the success_url after
+          * a successful payment.
+          * Instead use one of the strategies described in
+          * https://stripe.com/docs/payments/checkout/fulfill-orders
+          */
+        successUrl: 'https://baify.netlify.app/',
+        cancelUrl: 'https://baify.netlify.app/',
       })
+      .then(function (result) {
+        if (result.error) {
+          /*
+            * If `redirectToCheckout` fails due to a browser or network
+            * error, display the localized error message to your customer.
+            */
+          var displayError = document.getElementById('error-message');
+          displayError.textContent = result.error.message;
+        }
+      });
     });
+  })();
 
 $('#navbar-btn').click(function() {
 $('#navbar').toggle();
