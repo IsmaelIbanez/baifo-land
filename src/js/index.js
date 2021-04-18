@@ -25,7 +25,7 @@ const showSlides = (n) => {
     slides[slideIndex - 1].style.display = 'block';
     dots[slideIndex - 1].setAttribute('class', 'dot active');
     clearTimeout(timeoutID);
-    timeoutID = setTimeout(autoSlides, 10000);
+    timeoutID = setTimeout(autoSlides, 5000);
 };
 
 const plusSlides = (n) => {
@@ -54,7 +54,7 @@ const autoSlides = () => {
 
     slides[slideIndex - 1].style.display = "block";
     dots[slideIndex - 1].setAttribute('class', 'dot active');
-    timeoutID = setTimeout(autoSlides, 10000);
+    timeoutID = setTimeout(autoSlides, 5000);
 }
 
 autoSlides();
@@ -96,6 +96,28 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   
   });
+
+  var stripe = Stripe("pk_test_51IdHvTHy6yeJaL9kFIfKq6D30x1slhxNU1tSwVPvJaywOPrh43FqSrcpts9JlfvsDCmciO0TIcFiwUgFAKtn5bSy001kHlKiCi");
+  var checkoutButton = document.getElementById("checkout-button");
+  checkoutButton.addEventListener("click", function () {
+    stripe.redirectToCheckout({ 
+        
+        items: [{price:'price_1IgSNSHy6yeJaL9kRXStnHD3',quantity: 1}],
+        
+
+    })
+        .then(function (result) {
+        // If redirectToCheckout fails due to a browser or network
+        // error, you should display the localized error message to your
+        // customer using error.message.
+        if (result.error) {
+          alert(result.error.message);
+        }
+    })
+      .catch(function (error) {
+        console.error("Error:", error);
+      })
+    });
 
 $('#navbar-btn').click(function() {
 $('#navbar').toggle();
