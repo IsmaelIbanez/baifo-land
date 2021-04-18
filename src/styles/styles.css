@@ -108,8 +108,7 @@ li {
 
 /* END Playlist Design */
 
-<<<<<<< HEAD
-=======
+
 .donate-card{
   padding-top: 2em;
   padding-bottom: 1em;
@@ -119,7 +118,6 @@ li {
   margin-bottom: 2em;
 }
 
->>>>>>> repair-img-team
 .team-image{
   object-fit:cover;
 }
@@ -140,9 +138,6 @@ li {
 .card-container {
   display: flex;
   flex-direction: row;
-<<<<<<< HEAD
-}
-=======
   padding-bottom: 5em;
 }
 
@@ -204,6 +199,5 @@ li {
 body {
   overflow-y: hidden; /* Hide vertical scrollbar */
   overflow-x: hidden; /* Hide horizontal scrollbar */
- }
-
->>>>>>> repair-img-team
+ }  
+ 
